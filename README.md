@@ -1,21 +1,40 @@
-# Surviving the Aftermath - Modtools
+# STA-Windfall
 
-This is a mod tool project for Surviving the Aftermath made available to aid you in the creation of Surviving the Aftermath mods.
+## How to install
 
-Surviving the Aftermath and the mod tools will be frequently updated which may break your mods if they rely on any parts of it.
+## Design considerations
 
-You are not allowed to modify or redistribute any part of this content except embedded in Surviving the Aftermath mods.
+### Mod design
 
+## Requirements
 
+## Expected outcome
 
+## Known issues
 
-USE OF THIS SOURCE CODE IS GOVERNED BY THE FOLLOWING LICENSE
-------------
+## Discussion
 
-Iceflake Studios Oy grants to you a perpetual, worldwide, non-exclusive, no-charge, and royalty-free license to reproduce and use this Source Code for reference purposes and embedding in Surviving the Aftermath mods. No other distribution or modification of the Source Code is permitted.
+Description
 
-The source code is made available strictly on an "AS IS" BASIS WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+    Triggering event is the gate is built.
+    It would occur from day 2 onwards (if gate is built) up to day 250; between midday and midnight.
+    Event would remain visible for 240sec and random chance of it occuring again after cooldown of 180sec.
+    A positive outcome is the chance of getting some combination of seeds and/or insect eggs.
+    A negative outcome is one (or more) colonist(s) get injured.
+    The attempt to set global resource like water, energy and SciencePoints is still unsuccessful
 
-If any provision of this License is held to be unenforceable or invalid, that provision will be enforced to the maximum extent possible and the other provisions will remain in full force and effect.
+## Links
 
-This License is governed by and construed in accordance with the laws of Finland.
+![fish-factory-mod](Assets/Images/sta-fish-factory-build-menu-location.jpg "Fish Factory mod")
+
+- Ella's version of the Fish Factory. Fixed some text in Localization and Events. Changed icon.
+  - [download from github](https://github.com/ellacharmed/StA-FishFactory)
+
+![Windfall-event-mod](Assets/Images/sta-windfall-event-mod.jpg "windfall event mod")
+
+- Windfall mod
+
+  - [download from github](https://github.com/ellacharmed/STA-Windfall)
+  - [download from paradoxplaza](https://mods.paradoxplaza.com/mods/3571/Any)
+
+- [How to install and use Mods in Surviving the Aftermath](https://ellacharmed.wordpress.com/2019/11/04/how-to-use-mods-in-surviving-the-aftermath/) guide via [ellacharmed](ellacharmed.wordpress.com)'s Wordpress blog
