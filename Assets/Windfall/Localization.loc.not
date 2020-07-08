@@ -1,0 +1,15 @@
+id,English,France,German,Spanish,Portuguese,Russian,Polish,Chinese
+
+#Event_Windfall_NAME,Windfall,,,,,,,,
+#Event_Windfall_DESC,"A few of the colonists have found an undergroud cave! They are asking for permission to go investigate.",,,,,,,,
+#Event_Windfall_NOTIFICATION_HEADER,Windfall from Heaven,,,,,,,,
+#Event_Windfall_NOTIFICATION_DESC,"What a Windfall, we found a cave!",,,,,,,,
+#Event_Windfall_GO,Give permission to go.,,,,,,,,
+#Event_Windfall_STAY,It is not worth the risk,,,,,,,,
+#Event_Windfall_LOOT_NAME,"Good fortune, we feel lucky!",,,,,,,,
+#Event_Windfall_LOOT_DESC,"An unexpected windfall; the colonists found some things!",,,,,,,,
+#Event_Windfall_INJURY_NAME,"A colonist has gotten injured.",,,,,,,,
+#Event_Windfall_INJURY_DESC,"Somebody missed a rabbit hole and has sustained an injury. That's really too bad.",,,,,,,,
+#Event_Windfall_STAY_NAME,Just stay in Colony,,,,,,,,
+#Event_Windfall_STAY_DESC,"There's too much work in the Colony to even think of going anywhere, we're stuck here anyways, just stuck running around",,,,,,,,
+#Event_Windfall_ALLDONE,Done,,,,,,,,

@@ -1,0 +1,81 @@
+< data version="0.0.6">
+    <list_data>
+        <resource_list name="EVENT_EXAMPLE_RESOURCES_01">
+            <resource type="Metal" min="3" max="5"/>
+            <!-- Which resources and how many are given or taken -->
+            <resource type="Parts" min="2" max="3"/>
+        </resource_list>
+        <resource_list name="EVENT_EXAMPLE_RESOURCES_02">
+            <resource type="Tools" min="1" max="1"/>
+            <resource type="Medicine" min="1" max="1"/>
+        </resource_list>
+        <colonist_list name="EVENT_EXAMPLE_01">
+            <colonist age="25" gender="male" conditions="Injured"/>
+            <colonist age="44" gender="female"/>
+        </colonist_list>
+        <event_list name="EVENT_EXAMPLE_01_RESULTS">
+            <event_id id="EVENT_EXAMPLE_01_POSITIVE"/>
+            <event_id id="EVENT_EXAMPLE_01_NEGATIVE"/>
+        </event_list>
+    </list_data>
+
+    <events>
+        <event id="EVENT_EXAMPLE_01" timeout="480" cooldown="9600">
+        <!-- How long the event is available and when can it reappear (in seconds) -->
+            <content header_key="#EVENT_EXAMPLE_01_NAME"
+                desc_key="#EVENT_EXAMPLE_01_DESC"
+                image_name="Event_Example"
+                soundevent_id="Example"
+                notification_header_key="#EVENT_EXAMPLE_01_NOTIFICATION_HEADER"
+                notification_desc_key="#EVENT_EXAMPLE_01_NOTIFICATION_DESC"
+                visual_object_type="Group"/>
+            <trigger type="DaysPassed" min="10" max="999"/>
+            <!-- Time period the event can appear	 -->
+            <trigger type="TimeOfDay" min="0.2" max="0.5"/>
+            <!-- Time of day event can appear. Midday: 0, Dusk: 0.33, Midnight: 0.5, Dawn: 0.66 -->
+            <trigger type="Building" target="Trapper"/>
+            <!-- Which building must be built before the event can appear, usually the Gate -->
+
+            <choice>
+                <button text_key="#EVENT_EXAMPLE_GO"/>
+                <result type="LoadEvent" list_name="EVENT_EXAMPLE_01_RESULTS"/>
+                <!-- Picks one result from the list at random -->
+            </choice>
+
+            <choice>
+                <button text_key="#EVENT_EXAMPLE_STAY"/>
+                <result type="ModifyColonistsNeeds" event_need_id="DECLINE" happiness_delta="-0.02" duration="300"/>
+                <!-- Decision leads to 2% Happiness decrease for 300 seconds -->
+                <result type="LoadEvent" target_event_id="EVENT_EXAMPLE_01_STAY"/>
+            </choice>
+        </event>
+
+        <event id="EVENT_EXAMPLE_01_POSITIVE" parent_event_id="EVENT_EXAMPLE_01">
+            <content header_key="#EVENT_EXAMPLE_01_LOOT_NAME" desc_key="#EVENT_EXAMPLE_01_LOOT_DESC" image_name="Event_Scout" soundevent_id="Positive"/>
+            <choice>
+                <button text_key="#EVENT_DONE"/>
+                <result type="ModifyResources" modify_type="add" amount="1" list_name="EVENT_EXAMPLE_RESOURCES_01"/>
+                <!-- Choice led to adding 1 resource (example: 2 Parts)  from the first list to the player -->
+                <result type="ModifyResources" modify_type="add" amount="1" list_name="EVENT_EXAMPLE_RESOURCES_02"/>
+                <!-- And 1 resource from the second list -->
+            </choice>
+        </event>
+
+        <event id="EVENT_EXAMPLE_01_NEGATIVE" parent_event_id="EVENT_EXAMPLE_01">
+            <content header_key="#EVENT_EXAMPLE_01_INJURY_NAME" desc_key="#EVENT_EXAMPLE_01_INJURY_DESC" image_name="Event_Scout" soundevent_id="Negative"/>
+            <choice>
+                <button text_key="#EVENT_DONE"/>
+                <result type="ModifyColonistsConditions" amount="1" condition="Injured"/>
+                <!-- Choice led to 1 random injured colonist -->
+            </choice>
+        </event>
+
+        <event id="EVENT_EXAMPLE_01_STAY" parent_event_id="EVENT_EXAMPLE_01">
+            <content header_key="#EVENT_EXAMPLE_01_STAY_NAME" desc_key="#EVENT_EXAMPLE_01_STAY_DESC" image_name="Event_Scout" soundevent_id="Negative"/>
+            <choice>
+                <button text_key="#EVENT_DONE"/>
+            </choice>
+        </event>
+
+    </events>
+</data>
