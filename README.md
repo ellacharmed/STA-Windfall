@@ -29,14 +29,20 @@ Provides another avenue to get seeds, insect eggs, survivors, SciencePoints and 
 
 ## Links
 
+### Fish Factory mod
+
 - ![fish-factory-mod](https://github.com/ellacharmed/STA-ResourceFactory/blob/master/Assets/Images/sta-fish-factory-build-menu-location.jpg "Fish Factory mod")
 
   - Ella's version of the Fish Factory. Fixed some text in Localization and Events. Changed icon.
   - [download from github](https://github.com/ellacharmed/StA-FishFactory)
 
+### Resource Factory mod
+
 - ![resource-factory-mod](https://github.com/ellacharmed/STA-ResourceFactory/blob/master/Assets/Images/sta-resource-factory-build-menu-location.jpg "Resource Factory mod")
 
   - [download from github](https://github.com/ellacharmed/STA-ResourceFactory)
   - [download from paradoxplaza](https://mods.paradoxplaza.com/mods/1485/Any)
+
+### Installation instructions
 
 - [How to install and use Mods in Surviving the Aftermath](https://ellacharmed.wordpress.com/2019/11/04/how-to-use-mods-in-surviving-the-aftermath/) guide via [ellacharmed](ellacharmed.wordpress.com)'s Wordpress blog
