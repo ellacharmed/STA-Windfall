@@ -39,6 +39,9 @@ Assets/UnityPark/uEcho/Editor/uEcho.dll.meta
 # -------------[ Local files ]----------------------- #
 _Local/
 _Local.meta
+.meta
+.not*
+.not*.meta
 
 AssetBundles/
 Mods/

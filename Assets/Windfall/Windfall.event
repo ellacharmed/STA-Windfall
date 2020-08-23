@@ -49,13 +49,13 @@
                 notification_header_key="#Event_Windfall_NOTIFICATION_HEADER"
                 notification_desc_key="#Event_Windfall_NOTIFICATION_DESC"
                 visual_object_type="MediumGroup"/>
-            <trigger type="DaysPassed" min="1" max="999"/>
+            <!-- <trigger type="DaysPassed" min="10" max="999"/> -->
             <!-- Time period the event can appear	 -->
-            <trigger type="TimeOfDay" min="0.1" max="0.5"/>
+            <trigger type="TimeOfDay" min="0.01" max="0.5"/>
             <!-- Time of day event can appear. Midday: 0, Dusk: 0.33, Midnight: 0.5, Dawn: 0.66 -->
             <trigger type="Building" target="Gate"/>
             <!-- Which building must be built before the event can appear, usually the Gate -->
-
+            <!-- <trigger type="GamePhase" game_phase ="P0" comparison_type="Greater " /> -->
             <choice>
                 <button text_key="#Event_Windfall_GO"/>
                 <result type="LoadEvent" list_name="Event_Windfall_RESULTS"/>
@@ -86,7 +86,7 @@
         </event>
 
         <event id="Event_Windfall_NEGATIVE" parent_event_id="Event_Windfall">
-            <content header_key="#Event_Windfall_INJURY_NAME" desc_key="#Event_Windfall_INJURY_DESC" image_name="Character_Survivors" soundevent_id="Negative"/>
+            <content header_key="#Event_Windfall_INJURY_NAME" desc_key="#Event_Windfall_INJURY_DESC" image_name="Event_Injured" soundevent_id="Negative"/>
             <choice>
                 <button text_key="#EVENT_ALLDONE"/>
                 <result type="ModifyColonistsConditions" amount="1" condition="Injured"/>
