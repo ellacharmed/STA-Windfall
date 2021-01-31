@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: -1728751535, guid: 503d4024ee664e94cb10906948c3415f, type: 3}
   m_Name: Mod
   m_EditorClassIdentifier: 
-  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: 21300000, guid: db6085d4b4b96c644adbf1ffcda3e669, type: 3}
   modname: Windfall
-  desc: Windfall - experimenting with events. Min patch 1.9.0 required.
-  version: 0.1.1
-  startID: 1211202007
+  desc: Windfall - experimenting with events. Min patch 1.12.4 required.
+  version: 0.2
+  startID: 791690000

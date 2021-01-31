@@ -1,6 +1,6 @@
 # STA-Windfall
 
-Provides another avenue to get seeds, insect eggs, survivors, SciencePoints and Currency.
+Provides another avenue to get resources, seeds, insect eggs, survivors, SciencePoints and Currency.
 
 ## How to install
 
@@ -18,8 +18,8 @@ Provides another avenue to get seeds, insect eggs, survivors, SciencePoints and 
 
 ## Expected outcome
 
-- A positive outcome is the chance of getting some combination of seeds and/or insect eggs, between 1-12 Survivors, between 100-1000 SciencePoints for Research, and between 100-1000 Currency for Trade.
-- A negative outcome is one (or more) colonist(s) get injured.
+- A positive outcome is the chance of getting some combination of resources, seeds and/or insect eggs, between 1-12 Survivors, between 100-1000 SciencePoints for Research, and between 100-1000 Currency for Trade.
+- A negative outcome is one (or more) colonist(s) get injured, and/or some resources might be removed.
 
 ## Known issues
 
