@@ -2,13 +2,15 @@
     <list_data>
         <resource_list name="Event_Windfall_citydata">
         <!-- Which resources and how many are given or taken -->
-            <resource type="Research" min="10" max="1000"/>
-            <resource type="Currency" min="10" max="1000"/>
-            <resource type="Cloth" min="4" max="20"/>
+            <resource type="Research" min="100" max="1000"/>
+            <resource type="Currency" min="100" max="1000"/>
+
         </resource_list>
         <resource_list name="Event_Windfall_resources">
         <!-- Which resources and how many are given or taken -->
             <resource type="Component" min="4" max="20"/>
+            <resource type="Cloth" min="4" max="20"/>
+            <resource type="Metal" min="4" max="20"/>
             <resource type="Cloth_3" min="4" max="20"/>
             <resource type="Electronics" min="4" max="20"/>
         </resource_list>
@@ -84,7 +86,7 @@
         <event id="Event_Windfall_POSITIVE" parent_event_id="Event_Windfall">
             <content header_key="#Event_Windfall_LOOT_NAME" desc_key="#Event_Windfall_LOOT_DESC" image_name="Event_Building1" soundevent_id="Positive"/>
             <choice>
-                <button text_key="#EVENT_ALLDONE"/>
+                <button text_key="#EVENT_DONE"/>
                 <result type="ModifyResources" modify_type="add" amount="1" list_name="Event_Windfall_seedeggs"/>
                 <result type="ModifyResources" modify_type="add" amount="1" list_name="Event_Windfall_insecteggs"/>
                 <result type="ModifyResources" modify_type="add" amount="2" list_name="Event_Windfall_citydata"/>
@@ -96,7 +98,7 @@
         <event id="Event_Windfall_NEGATIVE" parent_event_id="Event_Windfall">
             <content header_key="#Event_Windfall_INJURY_NAME" desc_key="#Event_Windfall_INJURY_DESC" image_name="Event_Injured" soundevent_id="Negative"/>
             <choice>
-                <button text_key="#EVENT_ALLDONE"/>
+                <button text_key="#EVENT_DONE"/>
                 <result type="ModifyColonistsConditions" amount="1" condition="Injured"/>
                 <!-- Choice led to 1 random injured colonist -->
                 <result type="ModifyResources" modify_type="remove" amount="1" list_name="Event_Windfall_resources"/>
@@ -106,7 +108,7 @@
         <event id="Event_Windfall_01_STAY" parent_event_id="Event_Windfall">
             <content header_key="#Event_Windfall_01_STAY_NAME" desc_key="#Event_Windfall_01_STAY_DESC" image_name="Event_Scout" soundevent_id="Negative"/>
             <choice>
-                <button text_key="#EVENT_ALLDONE"/>
+                <button text_key="#EVENT_DONE"/>
             </choice>
         </event>
 
