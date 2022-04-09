@@ -1,114 +1,125 @@
 <data version="0.0.6">
     <list_data>
-        <resource_list name="Event_Windfall_citydata">
-        <!-- Which resources and how many are given or taken -->
-            <resource type="Research" min="100" max="1000"/>
-            <resource type="Currency" min="100" max="1000"/>
-
-        </resource_list>
         <resource_list name="Event_Windfall_resources">
-        <!-- Which resources and how many are given or taken -->
-            <resource type="Component" min="4" max="20"/>
-            <resource type="Cloth" min="4" max="20"/>
-            <resource type="Metal" min="4" max="20"/>
-            <resource type="Cloth_3" min="4" max="20"/>
-            <resource type="Electronics" min="4" max="20"/>
+            <!-- Which resources and how many are given or taken -->
+            <resource type="Component" min="4" max="5" />
+            <resource type="Cloth" min="4" max="5" />
+            <resource type="Metal" min="4" max="5" />
+            <resource type="Electronics" min="4" max="5" />
         </resource_list>
         <resource_list name="Event_Windfall_seedeggs">
-            <resource type="Wheat" min="1" max="1"/>
-            <resource type="Soybean" min="1" max="1"/>
-            <resource type="Cabbage" min="1" max="1"/>
-            <resource type="Carrot" min="1" max="1"/>
-            <resource type="Peanut" min="1" max="1"/>
+            <resource type="Wheat" min="1" max="1" />
+            <resource type="Soybean" min="1" max="1" />
+            <resource type="Cabbage" min="1" max="1" />
+            <resource type="Carrot" min="1" max="1" />
+            <resource type="Peanut" min="1" max="1" />
         </resource_list>
         <resource_list name="Event_Windfall_insecteggs">
-            <resource type="Crickets" min="1" max="1"/>
-            <resource type="Cockroaches" min="1" max="1"/>
-            <resource type="Mealworms" min="1" max="1"/>
-            <resource type="Buffaloworms" min="1" max="1"/>
-            <resource type="Waxworms" min="1" max="1"/>
+            <resource type="Crickets" min="1" max="1" />
+            <resource type="Cockroaches" min="1" max="1" />
+            <resource type="Mealworms" min="1" max="1" />
+            <resource type="Buffaloworms" min="1" max="1" />
+            <resource type="Waxworms" min="1" max="1" />
         </resource_list>
-        <colonist_list name="EVENT_SURVIVORS_PEOPLELIST">
-            <colonist age="22" gender="female"/>
-            <colonist age="25" gender="male"/>
-            <colonist age="34" gender="female" conditions="Infected"/>
-            <colonist age="25" gender="male" conditions="Injured"/>
-            <colonist age="44" gender="female"/>
-            <colonist age="40" gender="male"/>
-            <colonist age="22" gender="male"/>
-            <colonist age="25" gender="female"/>
-            <colonist age="38" gender="female"/>
-            <colonist age="53" gender="male"/>
-            <colonist age="45" gender="male"/>
-            <colonist age="25" gender="female"/>
+        <colonist_list name="Event_Windfall_colonistList">
+            <colonist age="22" gender="female" />
+            <colonist age="25" gender="male" />
+            <colonist age="34" gender="female" conditions="Infected" />
+            <colonist age="25" gender="male" conditions="Injured" />
+            <colonist age="44" gender="female" />
+            <colonist age="40" gender="male" />
+            <colonist age="22" gender="male" />
+            <colonist age="25" gender="female" />
+            <colonist age="38" gender="female" />
+            <colonist age="53" gender="male" />
+            <colonist age="45" gender="male" />
+            <colonist age="25" gender="female" />
         </colonist_list>
         <event_list name="Event_Windfall_RESULTS">
-            <event_id id="Event_Windfall_POSITIVE"/>
-            <event_id id="Event_Windfall_NEGATIVE"/>
+            <event_id id="Event_Windfall_MEGALOOT" />
+            <event_id id="Event_Windfall_NORMALLOOT" />
+            <event_id id="Event_Windfall_NOLOOT" />
         </event_list>
     </list_data>
 
     <events>
-        <event id="Event_Windfall" timeout="480" cooldown="960">
-        <!-- How long the event is available and when can it reappear (in seconds) -->
+        <event id="Event_Windfall" timeout="480" cooldown="9600">
+            <!-- How long the event is available and when can it reappear (in seconds) -->
             <content header_key="#Event_Windfall_NAME"
-                desc_key="#Event_Windfall_DESC"
-                image_name="Character_Medic"
-                soundevent_id="Positive"
-                notification_header_key="#Event_Windfall_NOTIFICATION_HEADER"
-                notification_desc_key="#Event_Windfall_NOTIFICATION_DESC"
-                visual_object_type="MediumGroup"/>
-            <!-- <trigger type="DaysPassed" min="5" max="999"/> -->
+                     desc_key="#Event_Windfall_DESC"
+                     image_name="Character_Medic"
+                     soundevent_id="Positive"
+                     notification_header_key="#Event_Windfall_NOTIFICATION_HEADER"
+                     notification_desc_key="#Event_Windfall_NOTIFICATION_DESC"
+                     visual_object_type="MediumGroup" />
+            
+            <!-- <trigger type="GamePhase" game_phase="P1" /> -->
+            <!-- <trigger type="DaysPassed" min="4" max="999" />  -->
             <!-- Time period the event can appear	 -->
-            <trigger type="TimeOfDay" min="0.01" max="0.5"/>
+            <!-- <trigger type="TimeOfDay" min="0.01" max="0.5" /> -->
             <!-- Time of day event can appear. Midday: 0, Dusk: 0.33, Midnight: 0.5, Dawn: 0.66 -->
-            <trigger type="Building" target="Gate"/>
+            <trigger type="Building" target="MedicalTent" />
             <!-- Which building must be built before the event can appear, usually the Gate -->
             <!-- <trigger type="GamePhase" game_phase ="P0" comparison_type="Greater " /> -->
+
             <choice>
-                <button text_key="#Event_Windfall_GO"/>
-                <result type="LoadEvent" list_name="Event_Windfall_RESULTS"/>
+                <button text_key="#Event_Windfall_GO" />
+                <result type="ModifyColonistsNeeds"
+                        event_need_id="TRIPSUCCESS"
+                        happiness_delta="0.1"
+                        duration="300"
+                        is_hidden="false" />
+                <result type="LoadEvent" list_name="Event_Windfall_RESULTS" />
                 <!-- Picks one result from the list at random -->
             </choice>
 
             <choice>
-                <button text_key="#Event_Windfall_STAY"/>
+                <button text_key="#Event_Windfall_STAY" />
                 <result type="ModifyColonistsNeeds"
-                    event_need_id="TRIPSUCCESS"
-                    happiness_delta="-0.02"
-                    duration="300"
-                    is_hidden="false"/>
+                        event_need_id="DECLINE"
+                        happiness_delta="-0.02"
+                        duration="300"
+                        is_hidden="false" />
                 <!-- Decision leads to 2% Happiness decrease for 300 seconds -->
-                <result type="LoadEvent" target_event_id="Event_Windfall_01_STAY"/>
+                <result type="LoadEvent" target_event_id="Event_Windfall_01_STAY" />
             </choice>
         </event>
 
-        <event id="Event_Windfall_POSITIVE" parent_event_id="Event_Windfall">
-            <content header_key="#Event_Windfall_LOOT_NAME" desc_key="#Event_Windfall_LOOT_DESC" image_name="Event_Building1" soundevent_id="Positive"/>
+        <event id="Event_Windfall_MEGALOOT" parent_event_id="Event_Windfall">
+            <content header_key="#Event_Windfall_MEGALOOT_NAME" desc_key="#Event_Windfall_MEGALOOT_DESC" image_name="Event_Building1" soundevent_id="Positive" />
             <choice>
-                <button text_key="#EVENT_DONE"/>
-                <result type="ModifyResources" modify_type="add" amount="1" list_name="Event_Windfall_seedeggs"/>
-                <result type="ModifyResources" modify_type="add" amount="1" list_name="Event_Windfall_insecteggs"/>
-                <result type="ModifyResources" modify_type="add" amount="2" list_name="Event_Windfall_citydata"/>
-                <result type="ModifyResources" modify_type="add" amount="2" list_name="Event_Windfall_resources"/>
-                <result type="SpawnColonists" modify_type="add" amount="10" list_name="EVENT_SURVIVORS_PEOPLELIST"/>
+                <button text_key="#EVENT_WINDFALL_DONE" />
+                <result type="ModifyResources" modify_type="add" amount="2" list_name="Event_Windfall_seedeggs" />
+                <result type="ModifyResources" modify_type="add" amount="2" list_name="Event_Windfall_insecteggs" />
+                <result type="ModifyResources" modify_type="add" amount="2" list_name="Event_Windfall_resources" />
+                <result type="SpawnColonists" modify_type="add" amount="5" list_name="Event_Windfall_colonistList" />
             </choice>
         </event>
 
-        <event id="Event_Windfall_NEGATIVE" parent_event_id="Event_Windfall">
-            <content header_key="#Event_Windfall_INJURY_NAME" desc_key="#Event_Windfall_INJURY_DESC" image_name="Event_Injured" soundevent_id="Negative"/>
+        <event id="Event_Windfall_NORMALLOOT" parent_event_id="Event_Windfall">
+            <content header_key="#Event_Windfall_NORMALLOOT_NAME" desc_key="#Event_Windfall_NORMALLOOT_DESC" image_name="Event_Driving " soundevent_id="Positive" />
             <choice>
-                <button text_key="#EVENT_DONE"/>
-                <result type="ModifyColonistsConditions" amount="1" condition="Injured"/>
+                <button text_key="#EVENT_WINDFALL_DONE" />
+                <result type="ModifyResources" modify_type="add" amount="1" list_name="Event_Windfall_seedeggs" />
+                <result type="ModifyResources" modify_type="add" amount="1" list_name="Event_Windfall_insecteggs" />
+                <result type="ModifyResources" modify_type="add" amount="1" list_name="Event_Windfall_resources" />
+            </choice>
+        </event>
+
+        <event id="Event_Windfall_NOLOOT" parent_event_id="Event_Windfall">
+            <content header_key="#Event_Windfall_NOLOOT_NAME" desc_key="#Event_Windfall_NOLOOT_DESC" image_name="Event_Injured" soundevent_id="Negative" />
+            <choice>
+                <button text_key="#EVENT_WINDFALL_DONE" />
+                <result type="ModifyColonistsConditions" amount="1" condition="Injured" />
                 <!-- Choice led to 1 random injured colonist -->
-                <result type="ModifyResources" modify_type="remove" amount="1" list_name="Event_Windfall_resources"/>
+                <result type="ModifyResources" modify_type="remove" amount="1" list_name="Event_Windfall_resources" />
             </choice>
         </event>
 
         <event id="Event_Windfall_01_STAY" parent_event_id="Event_Windfall">
-            <content header_key="#Event_Windfall_01_STAY_NAME" desc_key="#Event_Windfall_01_STAY_DESC" image_name="Event_Scout" soundevent_id="Negative"/>
+            <content header_key="#Event_Windfall_01_STAY_NAME" desc_key="#Event_Windfall_01_STAY_DESC" image_name="Event_Scout" soundevent_id="Negative" />
             <choice>
-                <button text_key="#EVENT_DONE"/>
+                <button text_key="#EVENT_WINDFALL_DONE" />
             </choice>
         </event>
 

@@ -4,9 +4,11 @@ Provides another avenue to get some resources, seeds, insect eggs, Survivors, Sc
 
 
 
+
 Design considerations
 
-Event would remain visible for 480sec and random chance of it occurring again after cooldown of 960sec.
+Event would remain visible for 480sec and random chance of it occurring again after cooldown of 9600sec.
+
 
 
 
@@ -15,7 +17,8 @@ Event would remain visible for 480sec and random chance of it occurring again af
 
 Requirements
 
-Triggering event is the Gate is built. The number of game days and game phases is not taken into account.
+Triggering event is to build the Medical Tent. The number of game days and game phases is not taken into account.
+
 
 
 
@@ -24,13 +27,14 @@ Triggering event is the Gate is built. The number of game days and game phases i
 Expected outcome
 
 
-    A positive outcome is the chance of getting some combination of resources, seeds and/or insect eggs, between 1-12 Survivors, between 100-1000 SciencePoints for Research, and between 100-1000 Currency for Trade.
+    A positive outcome is the chance of getting some combination of resources, seeds and/or insect eggs, between 1-12 Survivors.
     A negative outcome is one (or more) colonist(s) get injured, and/or some resources might be removed.
 
 
 How to install
 
 Read the guide at my ellacharmed.wordpress.com blog page.
+
 
 
 
@@ -47,6 +51,7 @@ Having issues with the mod?
 
 
 
+
 Unity engine limitations
 
 Cannot use a newly downloaded mod in a pre-existing SAVE game. Must always start a NEW game.
@@ -56,6 +61,7 @@ Remember that mods is still highly experimental if this is your first exposure t
 
 
 Once a save game is "modded", that save cannot be reverted to a vanilla game forevermore. Once a mod is updated, that save with the older mod may no longer work; as the mod's signature is considered different by the game, thus why you'd need to start a NEW game.
+
 
 
 

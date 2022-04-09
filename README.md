@@ -8,20 +8,22 @@ Provides another avenue to get resources, seeds, insect eggs, survivors, Science
 
 ## Design considerations
 
-- Event would remain visible for 240sec and random chance of it occuring again after cooldown of 180sec.
+- Event would remain visible for 480sec and random chance of it occuring again after cooldown of 9600sec.
 - The attempt to set global resource like water, energy <del>and SciencePoints</del> is still unsuccessful.
 - The initial DaysPassed trigger removed, as update 9 introduces Game Phases.
 
 ## Requirements
 
-- Triggering event is the Gate is built. The number of game days and game phases is not taken into account.
+- Triggering event is to build the Medical Tent. The number of game days and game phases is not taken into account.
 
 ## Expected outcome
 
-- A positive outcome is the chance of getting some combination of resources, seeds and/or insect eggs, between 1-12 Survivors, between 100-1000 SciencePoints for Research, and between 100-1000 Currency for Trade.
+- A positive outcome is the chance of getting some combination of resources, seeds and/or insect eggs, between 1-12 Survivors.
 - A negative outcome is one (or more) colonist(s) get injured, and/or some resources might be removed.
 
 ## Known issues
+
+- Using an outdated mod may prevent this mod from trigerring.
 
 ## Discussion
 

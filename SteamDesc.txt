@@ -1,18 +1,18 @@
 [h2]Overview[/h2]
-[code]Windfall - experimenting with events. Min patch 1.14 required.
+[code]Windfall - experimenting with events. Min patch 1.22 required.
 
-[h1]Provides another avenue to get some resources, seeds, insect eggs, Survivors, SciencePoints and Currency.[/h1]
+[h1]Provides another avenue to get some resources, seeds, insect eggs, Survivors.[/h1]
 [/code]
 
 [img]https://steamuserimages-a.akamaihd.net/ugc/1769329097644045757/C08DB431BC041D7387946FC8C22E9AAE1A3096D0/[/img]
 
 [h2]Design considerations[/h2]
-Event would remain visible for 480sec and random chance of it occuring again after cooldown of 960sec.
+Event would remain visible for 480sec and random chance of it occuring again after cooldown of 9600sec.
 
 
 
 [h2]Requirements[/h2]
-Triggering event is the Gate is built. The number of game days and game phases is not taken into account.
+Triggering event is to build the Medical Tent. The number of game days and game phases is not taken into account.
 
 
 
@@ -22,8 +22,6 @@ Triggering event is the Gate is built. The number of game days and game phases i
 [list]
 [*] resources, seeds and/or insect eggs, 
 [*] between 1-12 Survivors, 
-[*] between 100-1000 SciencePoints for Research, and 
-[*] between 100-1000 Currency for Trade.
 [/list]
 [*] A negative outcome is 
 [list]
@@ -84,8 +82,6 @@ And most important of all.
 Do not report a modded game as "broken" or not working to the developers.
 Only report a bug/issue to Iceflake when playing vanilla games, unless it is stated by the mod-developer that their mod is safe to use.
 
-[h2]Seeking Crowdsourcing for Translations to other languages[/h2]
-[url=https://docs.google.com/spreadsheets/d/1MkII_yQ-w2ToqtcjcwsrY7GynV8GrPrYJyFrdIRkft8/edit?usp=sharing]windfall localization text on Google Sheet[/url]
 
 [h2]If you like this content, you can support me[/h2]
 Favorite, Subscribe, Like, Comment on my mods and content on the various site. Help spread the word.
