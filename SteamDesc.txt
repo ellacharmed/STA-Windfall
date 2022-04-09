@@ -1,0 +1,98 @@
+[h2]Overview[/h2]
+[code]Windfall - experimenting with events. Min patch 1.14 required.
+
+[h1]Provides another avenue to get some resources, seeds, insect eggs, Survivors, SciencePoints and Currency.[/h1]
+[/code]
+
+[img]https://steamuserimages-a.akamaihd.net/ugc/1769329097644045757/C08DB431BC041D7387946FC8C22E9AAE1A3096D0/[/img]
+
+[h2]Design considerations[/h2]
+Event would remain visible for 480sec and random chance of it occuring again after cooldown of 960sec.
+
+
+
+[h2]Requirements[/h2]
+Triggering event is the Gate is built. The number of game days and game phases is not taken into account.
+
+
+
+[h2]Expected outcome[/h2]
+[list]
+[*] A positive outcome is the chance of getting some combination of 
+[list]
+[*] resources, seeds and/or insect eggs, 
+[*] between 1-12 Survivors, 
+[*] between 100-1000 SciencePoints for Research, and 
+[*] between 100-1000 Currency for Trade.
+[/list]
+[*] A negative outcome is 
+[list]
+[*] one (or more) colonist(s) get injured, and/or 
+[*] some resources might be removed.
+[/list]
+[/list]
+
+
+
+[h2]How to install[/h2]
+You can Subscribe from a browser or the Steam client. Outcome is the same.
+[list]
+[*] Ensure game is NOT running
+[*] Click the green Subscribe button above
+[*] If you Subscribed via browser, launch the Steam Client and check that the Workshop content has been downloaded and that there are new file(s) in the path below, matching the item(s) that you had subscribe to. Each subscribed mod file will be in its own numbered folder.
+[*] There's no need to do anything in the Paradox Launcher. The mod files are located in the Steam path, not in Documents path. [code]\Program Files (x86)\Steam\steamapps\workshop\content\684450[/code]
+[*] Launch game, and enable mod in the Mods --> Select Mod screen
+[*] Start a NEW game
+[/list]
+
+
+[h2]Having issues with the mod?[/h2]
+[list]
+[*] Verify that you have the mod enabled in the Select Mod screen in the game, not in Paradox Launcher
+[*] Does the game crash when you load mods? Try disabling all other mods and running with just [b]this mod enabled[/b]. 
+[*] Never do a SECOND load. Quit all the way to the Desktop.
+[*] If you are sure, the cause is this mod, please provide [b][i]ALL[/i][/b] the answers in the Troubleshooting section below. Incomplete answers would put you last in the queue while I answer others first who have taken the time to help me help you.
+[/list]
+
+
+[h2]Unity engine limitations[/h2]
+Cannot use a newly downloaded mod in a pre-existing SAVE game. Must always start a NEW game. 
+
+Cannot load a game the SECOND time, even if you're about to start a NEW game. Once you have "Exit to Main Menu" once, you need to "Quit" the game all the way to the Desktop. 
+
+Remember that mods is still highly experimental if this is your first exposure to modding. Do not use mods if you do not like to restart a new game each time a mod is updated, or each time a game is updated that would render that mod obsolete for the newly release patch version.
+
+Once a save game is "modded", that save cannot be reverted to a vanilla game forevermore. Once a mod is updated, that save with the older mod may no longer work; as the mod's signature is considered different by the game, thus why you'd need to start a NEW game.
+
+
+[h2]Troubleshooting[/h2]
+[olist]
+[*] Have you disabled all other mods except this one? [YES/No]
+[*] After you enabled just [i]this mod[/i], have you started a NEW game? [YES/No]
+[*] Is your game version same as the version stated in the Overview box? Please state your game version [1.##.####] in your report.
+[*] Is the issue you encountered still present? Can it be reproduced in the NEW game? Please outline all the steps for me to reproduce at my end, or send me the Save file.
+[*] If the issue is incompatibility with another mod (that is not mine), please provide the URL to the Workshop page so I may test.
+[*] Please post URL to the pastebin of the logfile
+
+path to logfile: [code]%USERPROFILE%\AppData\LocalLow\Iceflake Studios\Surviving the Aftermath\[/code]
+[*] (optional) Please post URL to the zipfile that contains the SAVE game and the logfile
+
+path to save game: [code]Documents\Paradox Interactive\Surviving the Aftermath\SaveGames[/code]
+[/olist]
+
+And most important of all.
+Do not report a modded game as "broken" or not working to the developers.
+Only report a bug/issue to Iceflake when playing vanilla games, unless it is stated by the mod-developer that their mod is safe to use.
+
+[h2]Seeking Crowdsourcing for Translations to other languages[/h2]
+[url=https://docs.google.com/spreadsheets/d/1MkII_yQ-w2ToqtcjcwsrY7GynV8GrPrYJyFrdIRkft8/edit?usp=sharing]windfall localization text on Google Sheet[/url]
+
+[h2]If you like this content, you can support me[/h2]
+Favorite, Subscribe, Like, Comment on my mods and content on the various site. Help spread the word.
+And Donate so I can upgrade my equipment to create more content. It is very much appreciated. Thank you.
+[list]
+[*] [url=https://steamcommunity.com/id/ellacharmed/myworkshopfiles/][img]https://i.imgur.com/CVB7ySs.png[/img][/url]
+[*] [url=ellacharmed.wordpress.com][img]https://i.imgur.com/FAExbV9.png[/img][/url]
+[*] [url=https://www.youtube.com/channel/UCB2o5PWMDzbmOzh7whq245Q][img]https://i.imgur.com/7sKbINf.png[/img][/url]
+[*] [url=paypal.me/ellacharmed][img]https://i.imgur.com/hVmGk8E.png[/img][/url]
+[/list]

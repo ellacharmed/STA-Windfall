@@ -1,0 +1,94 @@
+Provides another avenue to get some resources, seeds, insect eggs, Survivors, SciencePoints and Currency.
+
+
+
+
+
+Design considerations
+
+Event would remain visible for 480sec and random chance of it occurring again after cooldown of 960sec.
+
+
+
+
+
+
+Requirements
+
+Triggering event is the Gate is built. The number of game days and game phases is not taken into account.
+
+
+
+
+
+Expected outcome
+
+
+    A positive outcome is the chance of getting some combination of resources, seeds and/or insect eggs, between 1-12 Survivors, between 100-1000 SciencePoints for Research, and between 100-1000 Currency for Trade.
+    A negative outcome is one (or more) colonist(s) get injured, and/or some resources might be removed.
+
+
+How to install
+
+Read the guide at my ellacharmed.wordpress.com blog page.
+
+
+
+
+
+
+Having issues with the mod?
+
+    Verify that you have the mod enabled in the Select Mod screen in the game, not in Paradox Launcher
+    Does the game crash when you load mods? Try disabling all other mods and running with just this mod enabled.
+    If you are sure, the cause is this mod, please provide ALL the answers in the Troubleshooting section below. Incomplete answers would put you last in the queue while I answer others first who have taken the time to help me to help you.
+
+
+
+
+
+Unity engine limitations
+
+Cannot use a newly downloaded mod in a pre-existing SAVE game. Must always start a NEW game.
+
+
+Remember that mods is still highly experimental if this is your first exposure to modding. Do not use mods if you do not like to restart a new game each time a mod is updated, or each time a game is updated that would render that mod obsolete for the newly release patch version.
+
+
+Once a save game is "modded", that save cannot be reverted to a vanilla game forevermore. Once a mod is updated, that save with the older mod may no longer work; as the mod's signature is considered different by the game, thus why you'd need to start a NEW game.
+
+
+
+
+
+Troubleshooting
+
+    Have you disabled all other mods except this one? [YES/No]
+    After you enabled just this mod, have you started a NEW game? [YES/No]
+    Is your game version same as the version stated in the Overview box? Please state your game version [1.##.####] in your report.
+    Is the issue you encountered still present? Can it be reproduced in the NEW game? Please outline all the steps for me to reproduce at my end, or send me the Save file.
+    If the issue is incompatibility with another mod (that is not mine), please provide the URL to the Workshop page so I may test.
+    Please post URL to the pastebin of the logfile
+    (optional) Please post URL to the zipfile that contains the SAVE game and the logfile
+
+path to logfile: 
+
+%USERPROFILE%\AppData\LocalLow\Iceflake Studios\Surviving the Aftermath\
+
+
+path to save game: 
+
+Documents\Paradox Interactive\Surviving the Aftermath\SaveGames
+
+
+
+And most important of all.
+
+Do not report a modded game as "broken" or not working to the developers.
+
+Only report a bug/issue to Iceflake when playing vanilla games, unless it is stated by the mod-developer that their mod is safe to use.
+
+
+
+
+Github source
